@@ -1,0 +1,15 @@
+.search-list {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    background-color: darkkhaki;
+    padding: 30px;
+    min-height: 90vh;
+    margin-bottom: 20px;
+}
+
+.spinner-placing {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}

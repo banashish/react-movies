@@ -1,0 +1,20 @@
+.category {
+    background-color: darkkhaki;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.category-heading {
+    display: inline-block;
+}
+
+.actions-icon {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: -6px;
+}
+.actions-icon:hover {
+    cursor: pointer;
+    color: blue;
+}

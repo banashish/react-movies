@@ -1,0 +1,23 @@
+.movie-item-image {
+    height: 10rem;
+}
+
+.movie-item {
+    height: 28rem;
+    width: 18rem;
+    min-width: 18rem;
+    text-align: left;
+    position: relative;
+    padding: 0px 0px;
+}
+
+.movie-item-description {
+    height: 9rem;
+    overflow-y: hidden;
+}
+
+.movie-item-release {
+    position: absolute;
+    margin-bottom: 12px !important;
+    bottom: 0;
+}
