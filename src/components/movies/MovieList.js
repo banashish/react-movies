@@ -9,7 +9,7 @@ const MovieList = (props) => {
   const [movies, setMovies] = useState([]);
   const page = useRef(0);
   const { isLoading, request, error } = useHttp();
-  if (movies.length < end && !isLoading) {
+  if (movies.length < end && !isLoading && !error) {
     const url = new URL(`https://api.themoviedb.org/3/movie/${type}`);
     const params = new URLSearchParams({
       api_key: "7b60c2cffaf2430c6939fed57f8ec4d5",
@@ -17,7 +17,7 @@ const MovieList = (props) => {
       page: page.current + 1,
     }).toString();
     url.search = params;
-    page.current = page.current+ 1;
+    page.current = page.current + 1;
     const transfrmationMethod = (data) => {
       setMovies((prevMovies) => [...prevMovies, ...data.results]);
       const obj = {};
@@ -46,15 +46,20 @@ const MovieList = (props) => {
     ));
   return (
     <div className={classes["movie-list-wrapper"]}>
-      {!isLoading && (
-        <ul className={`row ${classes["movie-list"]}`}>{movieItem}</ul>
-      )}
       {isLoading && (
         <div className={`d-flex justify-content-center`}>
           <div className="spinner-border" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
         </div>
+      )}
+      {error && !isLoading && (
+        <div className={`${classes.invalid}`}>
+          <span>{error}</span>
+        </div>
+      )}
+      {!isLoading && !error && (
+        <ul className={`row ${classes["movie-list"]}`}>{movieItem}</ul>
       )}
     </div>
   );

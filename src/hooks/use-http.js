@@ -14,7 +14,8 @@ const useHttp = () => {
       });
 
       if (!response.ok) {
-        throw new Error("request failed");
+        const error = await response.json();
+        throw new Error(error.status_message || "something went wrong");
       }
       let data = await response.json();
       transformation(data);

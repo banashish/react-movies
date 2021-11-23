@@ -6,10 +6,16 @@
     padding: 30px;
     min-height: 90vh;
     margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 .spinner-placing {
     position: fixed;
     top: 50%;
     left: 50%;
+}
+
+.invalid {
+    color: red;
 }
