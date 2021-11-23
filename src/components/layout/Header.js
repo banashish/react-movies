@@ -30,13 +30,13 @@ const Header = () => {
   }
 
   return (
-    <nav class="navbar navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand">ReactMovies</a>
-        <form class="d-flex">
+    <nav className="navbar navbar-light bg-light">
+      <div className="container">
+        <a className="navbar-brand">ReactMovies</a>
+        <form className="d-flex">
           <input
             ref={searchInput}
-            class="form-control me-2"
+            className="form-control me-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
@@ -44,7 +44,7 @@ const Header = () => {
             onKeyPress={keyPressHandler}
           />
           <button
-            class="btn btn-outline-success"
+            className="btn btn-outline-success"
             type="button"
             onClick={onSearchHandler}
           >

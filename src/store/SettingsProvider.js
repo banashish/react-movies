@@ -35,7 +35,6 @@ const SettingsProvider = (props) => {
     }).toString();
     url.search = params;
     const transformationMethod = (data) => {
-      console.log(data);
       dispatch({
         type: "SET_CONFIGURATION_KEYS",
         value: {
@@ -53,7 +52,7 @@ const SettingsProvider = (props) => {
       transformationMethod
     );
   }, []);
-
+  
   const setSearchKey = (searchKey) => {
     dispatch({
       type: "SET_SEARCH_KEY",

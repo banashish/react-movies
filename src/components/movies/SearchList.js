@@ -17,7 +17,6 @@ const SearchList = (props) => {
     url.search = params;
     const transfrmationMethod = (data) => {
       setSearchMoviesList(data.results);
-      console.log(searchMoviesList);
     };
     request(
       {
